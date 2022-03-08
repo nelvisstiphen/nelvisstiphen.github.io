@@ -1,6 +1,6 @@
 /* ********** Variables ********** */
 :root {
-    --first-color: turquoise;
+    --first-color: rgba(0, 250, 237);
     --first-alpha-color: rgba(0, 250, 237, 0.75);
     --second-color: #14192d;
     --second-alpha-color: rgba(20, 25, 45, 0.75);
