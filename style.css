@@ -1,6 +1,6 @@
 /* ********** Variables ********** */
 :root {
-    --first-color: rgba(0, 250, 237);
+    --first-color: turquoise;
     --first-alpha-color: rgba(0, 250, 237, 0.75);
     --second-color: #14192d;
     --second-alpha-color: rgba(20, 25, 45, 0.75);
@@ -17,7 +17,7 @@
     --white-alpha-color: rgba(255, 255, 255, 0.5);
     --black-alpha-color: rgba(0, 0, 0, 0.5);
     --font: "Raleway", sans-serif;
-    /* --max-width: 1200px; */
+    --max-width: 1200px;
     --header-height: 4rem;
 }
 
@@ -28,6 +28,7 @@ html {
     font-family: var(--font);
     font-size: 16px;
     scroll-behavior: smooth;
+    
 }
 
 *,
@@ -345,16 +346,22 @@ p {
     background-size: cover;
     background-position: center;
     background-attachment: var(--hero-attachment);
+    
 }
 
 .hero-image-opacity {
     width: 100%;
     min-height: 100vh;
     display: flex;
+    text-align: center;
     justify-content: center;
     align-items: center;
-    text-align: center;
     background-color: var(--hero-opacity-color);
+}
+
+.hero-image-content {
+    width: 100%;
+    min-width: 320px;
 }
 
 .hero-image-title {
@@ -754,11 +761,11 @@ progress::-moz-progress-bar {
 }
 
 .social-icon li a {
-    font-size: 2.2em;
+    
     transition: .5s;
     color: black;
     text-shadow: 1px 1px 5px var(--first-color);
-    
+    font-size: 30px;
 }
 
 .social-icon li a:hover {
@@ -803,7 +810,10 @@ progress::-moz-progress-bar {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    
 }
+
+
 
 .header {
     position: fixed;
