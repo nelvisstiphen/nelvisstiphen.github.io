@@ -776,9 +776,17 @@ progress::-moz-progress-bar {
     text-shadow: 1px 5px 1px black;
 }
 
+.footer img {
+    position: absolute;
+    width: 100%;
+    height: 30vh;
+    opacity: 1;
+    
+}
 
-
-
+.footer small, .footer section {
+    position: relative;
+}
 
 
 
@@ -807,13 +815,12 @@ progress::-moz-progress-bar {
     color: var(--white-color);
     background-color: var(--gray-dark-color);
     width: 100%;
-    height: 50vh;
+    height: 30vh;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    
 }
 
 
