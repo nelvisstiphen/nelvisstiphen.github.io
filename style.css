@@ -732,6 +732,8 @@ progress::-moz-progress-bar {
     background-color: var(--gray-dark-color);
     box-shadow: 7px 7px 10px black;
     
+    border-radius: 7px;
+    
 }
 
 .contact-card > svg {
@@ -756,6 +758,7 @@ progress::-moz-progress-bar {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding: 0;
     list-style: none;
     
 }
@@ -884,6 +887,7 @@ progress::-moz-progress-bar {
     flex-direction: column;
     max-width: 400px;
     background-color: var(--white-color);
+
 }
 
 .portfolio-modal h3 {
