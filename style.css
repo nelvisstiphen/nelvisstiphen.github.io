@@ -1,7 +1,7 @@
 /* ********** Variables ********** */
 :root {
-    --first-color: turquoise;
-    --first-alpha-color: rgba(0, 250, 237, 0.75);
+    --first-color: #d90062;
+    --first-alpha-color: rgba(217, 0, 98, 0.75);
     --second-color: #14192d;
     --second-alpha-color: rgba(20, 25, 45, 0.75);
     --third-color: #501464;
@@ -28,7 +28,6 @@ html {
     font-family: var(--font);
     font-size: 16px;
     scroll-behavior: smooth;
-    
 }
 
 *,
@@ -41,13 +40,11 @@ body {
     margin: 0;
     overflow-x: hidden;
     color: var(--text-color);
-    
 }
 
 a {
     color: var(--link-color);
     transition: all 0.5s ease-out;
-    text-decoration: none;
 }
 
 a:hover {
@@ -149,7 +146,7 @@ p {
     display: flex;
     list-style: none;
     transition: transform .5s ease-in-out;
-    animation: carousel-slide 50s infinite;
+    animation: carousel-slide 20s ease-in-out 3s;
 }
 
 #slide-1:checked ~ .slides {
@@ -346,28 +343,21 @@ p {
     background-size: cover;
     background-position: center;
     background-attachment: var(--hero-attachment);
-    
 }
 
 .hero-image-opacity {
     width: 100%;
     min-height: 100vh;
     display: flex;
-    text-align: center;
     justify-content: center;
     align-items: center;
+    text-align: center;
     background-color: var(--hero-opacity-color);
-}
-
-.hero-image-content {
-    width: 100%;
-    min-width: 320px;
 }
 
 .hero-image-title {
     font-size: 7.5vw;
     color: var(--hero-text-color);
-    text-shadow: 5px 5px 2px turquoise;
 }
 
 
@@ -637,7 +627,7 @@ progress::-moz-progress-bar {
 .container {
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
+    max-width: var(--max-width);
 }
 
 .gray-scale {
@@ -724,17 +714,12 @@ progress::-moz-progress-bar {
 .contact-card {
     margin: 1rem auto;
     padding: 1rem;
-    width: 90%;
+    width: 100%;
     height: 144px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background-color: var(--gray-dark-color);
-    box-shadow: 7px 7px 10px black;
-    
-    border-radius: 7px;
-    
 }
 
 .contact-card > svg {
@@ -742,66 +727,6 @@ progress::-moz-progress-bar {
     height: 2rem;
     fill: var(--first-color);
 }
-
-
-
-
-
-
-
-/* * CAMBIOS * */
-
-.iconos-footer {
-    width: 400px;
-}
-
-.social-icon {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 0;
-    list-style: none;
-    
-}
-
-.social-icon li a {
-    
-    transition: .5s;
-    color: black;
-    text-shadow: 1px 1px 5px var(--first-color);
-    font-size: 30px;
-}
-
-.social-icon li a:hover {
-    color: var(--first-color);
-    text-shadow: 1px 5px 1px black;
-}
-
-.footer img {
-    position: absolute;
-    width: 100%;
-    height: 30vh;
-}
-
-.footer small, .footer section {
-    position: relative;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .contact-card > small {
     margin-top: -1rem;
@@ -812,17 +737,8 @@ progress::-moz-progress-bar {
     padding: .5rem;
     text-align: center;
     color: var(--white-color);
-    /* background-color: var(--gray-dark-color); */
-    width: 100%;
-    height: 30vh;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+    background-color: var(--third-color);
 }
-
-
 
 .header {
     position: fixed;
@@ -893,7 +809,6 @@ progress::-moz-progress-bar {
     flex-direction: column;
     max-width: 400px;
     background-color: var(--white-color);
-
 }
 
 .portfolio-modal h3 {
