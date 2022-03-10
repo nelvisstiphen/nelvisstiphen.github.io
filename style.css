@@ -1022,11 +1022,8 @@ progress::-moz-progress-bar {
 
 
 .body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #000;
+    width: 250px;
+    height: 25vh;
 }
 
 @keyframes animate {
@@ -1039,6 +1036,7 @@ progress::-moz-progress-bar {
 }
 
 .box {
+    
     position: relative;
     width: 200px;
     height: 200px;
@@ -1054,8 +1052,8 @@ progress::-moz-progress-bar {
     height: 100%;
     transform-origin: center;
     transform-style: preserve-3d;
-    transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
-    -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(250px);
+    -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0004);
 }
 
 .box span img {
