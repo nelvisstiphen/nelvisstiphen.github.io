@@ -288,8 +288,10 @@ p {
 
 .hero-image-title {
     font-size: 7.5vw;
-    background: rgb(27,198,0);
-    background: linear-gradient(0deg, rgba(27,198,0,1) 0%, rgba(9,120,121,1) 60%, rgba(8,131,137,1) 64%, rgba(0,212,255,1) 100%);
+    background: rgb(39,255,0);
+    background: linear-gradient(0deg, rgba(39,255,0,1) 0%, rgba(0,255,152,1) 46%, rgba(0,194,255,1) 53%, var(--turqueza) 92%, var(--turqueza) 100%);
+    /* background: rgb(27,198,0);
+    background: linear-gradient(0deg, rgba(27,198,0,1) 0%, rgba(9,120,121,1) 60%, rgba(8,131,137,1) 64%, rgba(0,212,255,1) 100%); */
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
