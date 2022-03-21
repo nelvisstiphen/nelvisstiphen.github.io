@@ -287,7 +287,7 @@ p {
 }
 
 .hero-image-title {
-    font-size: 11vw;
+    font-size: 12vw;
     background: rgb(39,255,0);
     background: linear-gradient(0deg, rgba(39,255,0,1) 0%, rgba(0,255,152,1) 46%, rgba(0,194,255,1) 53%, var(--turqueza) 92%, var(--turqueza) 100%);
     /* background: rgb(27,198,0);
