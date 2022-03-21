@@ -40,12 +40,12 @@ html {
 *:before,
 *:after {
     box-sizing: inherit;
-    overflow-x: hidden;
+    
 }
 
 body {
     margin: 0;
-    
+    overflow-x: hidden;
     color: var(--blanco);
     background-color: #333;
 }
@@ -773,9 +773,9 @@ p {
     left: 0;
     bottom: 0;
     z-index: 999;
-    padding: 1rem;
-    width: 100%;
     
+    width: 100%;
+    padding: 1rem;
     background-color: transparent;
 }
 
