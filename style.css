@@ -345,6 +345,7 @@ p {
     pointer-events: none;
     transition: opacity 0.5s ease;
     border-radius: 25px 5px 25px 5px;
+    
 }
 
 .menu.is-active {
@@ -652,9 +653,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 0;
     list-style: none;
-    
 }
 
 .social-icon li a {
@@ -727,7 +726,7 @@ p {
 }
 
 .github {
-    color: black;
+    color: rgb(9, 255, 0);
 }
 
 .skill-content .figma {
