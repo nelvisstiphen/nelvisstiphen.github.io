@@ -548,6 +548,7 @@ p {
 
 .text-center span {
     font-size: 50px;
+    
 }
 
 .text-left {
@@ -673,7 +674,7 @@ p {
     position: relative;
 }
 
-.about span {
+.turqueza {
     color: var(--turqueza);
 }
 
@@ -731,11 +732,27 @@ p {
 
 .skill-content .figma {
     font-size: 30px;
-
 }
 
+.f {
+    color: #0ACF83;
+}
 
+.i {
+    color: #A259FF;
+}
 
+.g {
+    color: #F24E1E;
+}
+
+.m {
+    color: #FF7262;;
+}
+
+.a {
+    color: #1ABCFE;;
+}
 
 
 
