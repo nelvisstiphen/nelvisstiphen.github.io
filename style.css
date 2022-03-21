@@ -1,7 +1,6 @@
 /* ********** Variables ********** */
 :root {
-    --first-color: turquoise;
-    --first-alpha-color: rgba(0, 250, 237, 0.75);
+    
     --second-color: #14192d;
     --second-alpha-color: rgba(20, 25, 45, 0.75);
     --third-color: #501464;
@@ -16,9 +15,15 @@
     --text-color: #222;
     --white-alpha-color: rgba(255, 255, 255, 0.5);
     --black-alpha-color: rgba(0, 0, 0, 0.5);
-    --font: "Raleway", sans-serif;
+    
     --max-width: 1200px;
     --header-height: 4rem;
+
+    --gris: rgba(0, 0, 0, 0.60);
+    --gris-oscuro: #333333;
+    --turqueza: turquoise;
+    --blanco: white;
+    --font: "Raleway", sans-serif;
 }
 
 
@@ -40,8 +45,8 @@ html {
 body {
     margin: 0;
     overflow-x: hidden;
-    color: var(--text-color);
-    
+    color: var(--blanco);
+    background-color: #333;
 }
 
 a {
@@ -115,94 +120,6 @@ p {
 
 
 
-/* ********** Carousel ********** */
-@keyframes carousel-slide {
-    0% {
-        transform: translateX(0%);
-    }
-
-    25% {
-        transform: translateX(-25%);
-    }
-
-    50% {
-        transform: translateX(-50%);
-    }
-
-    75% {
-        transform: translateX(-75%);
-    }
-}
-
-.carousel {
-    margin: 2rem auto;
-    padding: 2rem 0;
-    max-width: 800px;
-    text-align: center;
-    overflow-x: hidden;
-    background-color: var(--carousel-bg-color);
-}
-
-.carousel .slides {
-    padding-left: 0;
-    width: 400%;
-    display: flex;
-    list-style: none;
-    transition: transform .5s ease-in-out;
-    animation: carousel-slide 50s infinite;
-}
-
-#slide-1:checked ~ .slides {
-    transform: translateX(0%);
-}
-
-#slide-2:checked ~ .slides {
-    transform: translateX(-25%);
-}
-
-#slide-3:checked ~ .slides {
-    transform: translateX(-50%);
-}
-
-#slide-4:checked ~ .slides {
-    transform: translateX(-75%);
-}
-
-.carousel input {
-    display: none;
-}
-
-.carousel label {
-    border: medium solid var(--gray-dark-color);
-    border-radius: 50%;
-    margin: 0 .25rem;
-    display: inline-block;
-    width: .75rem;
-    height: .75rem;
-    cursor: pointer;
-}
-
-#slide-1:checked ~ .slides-nav label#dot-1,
-#slide-2:checked ~ .slides-nav label#dot-2,
-#slide-3:checked ~ .slides-nav label#dot-3,
-#slide-4:checked ~ .slides-nav label#dot-4 {
-    background-color: var(--gray-dark-color);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -212,7 +129,9 @@ p {
     margin: 2rem auto;
     padding: 1rem;
     max-width: 800px;
-
+    Background-color: var(--gris);
+    border-radius: 15px 15px 15px 15px;
+    
 }
 
 .contact-form > * {
@@ -220,12 +139,15 @@ p {
     margin: 1rem auto;
     display: block;
     width: 100%;
+    
 }
 
 .contact-form input,
 .contact-form textarea {
     font-size: .85rem;
     font-family: var(--font);
+    border-radius: 15px 15px 15px 15px;
+    
 }
 
 .contact-form input {
@@ -238,12 +160,14 @@ p {
 .contact-form textarea {
     border: thin solid --gray-dark-color;
     resize: none;
+    
 }
 
 .contact-form input[type="submit"] {
     margin-top: 0;
     cursor: pointer;
     transition: all .5s ease-in-out;
+    
 }
 
 .contact-form input[type="submit"]:hover {
@@ -252,6 +176,7 @@ p {
 
 .contact-form *::placeholder {
     color: var(--gray-dark-color);
+    padding-left: 15px;
 }
 
 .contact-form-response {
@@ -259,13 +184,14 @@ p {
     width: 400px;
     text-align: center;
     background-color: var(--white-color);
+    color: var(--gris-oscuro);
 }
 
 .contact-form-response svg {
     margin-top: 2rem;
     width: 4rem;
     height: 4rem;
-    fill: var(--first-color);
+    fill: var(--turqueza);
 }
 
 .modal#gracias:target {
@@ -307,10 +233,6 @@ p {
 
 
 
-
-
-
-/* **********  ********** */
 
 
 
@@ -366,9 +288,11 @@ p {
 
 .hero-image-title {
     font-size: 7.5vw;
-    color: var(--hero-text-color);
-
-    text-shadow: 5px 5px 2px turquoise;
+    background: rgb(27,198,0);
+    background: linear-gradient(0deg, rgba(27,198,0,1) 0%, rgba(9,120,121,1) 60%, rgba(8,131,137,1) 64%, rgba(0,212,255,1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 
@@ -398,14 +322,14 @@ p {
 
 /* ********** Menu ********** */
 .menu-btn {
-    outline: thin solid var(--first-color);
+    outline: thin solid var(--turqueza);
     border: 0;
     cursor: pointer;
     background-color: var(--second-color);
 }
 
 .menu-btn svg {
-    fill: var(--first-color);
+    fill: var(--turqueza);
 }
 
 .menu {
@@ -415,10 +339,12 @@ p {
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: var(--second-color);
+    background-color: var(--gris);
+    padding: 10px;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.5s ease;
+    border-radius: 25px 5px 25px 5px;
 }
 
 .menu.is-active {
@@ -432,12 +358,12 @@ p {
     font-weight: bold;
     text-align: center;
     text-decoration: none;
-    color: var(--first-color);
+    color: var(--turqueza);
 }
 
 .menu a:hover {
     color: var(--white-color);
-    background-color: var(--first-color);
+    background-color: var(--turqueza);
 }
 
 @media screen and (min-width: 1024px) {
@@ -501,7 +427,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--black-alpha-color);
+    background-color: var(--gris);
     opacity: 0;
     pointer-events: none;
     transition: all 1s;
@@ -520,7 +446,7 @@ p {
 .modal-close svg {
     width: 3rem;
     height: 3rem;
-    fill: var(--first-color);
+    fill: var(--turqueza);
 }
 
 .modal[id|= "trabajo"]:target {
@@ -538,50 +464,6 @@ p {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ********** ProgressBar ********** */
-
-progress {
-    width: 100%;
-    height: 1rem;
-    background-color: var(--gray-color);
-}
-
-progress::-webkit-progress-bar {
-    background-color: var(--gray-color);
-}
-
-progress::-webkit-progress-value {
-    background-color: var(--gray-dark-color);
-}
-
-progress::-moz-progress-bar {
-    background-color: var(--gray-dark-color);
-}
-
-.progress {
-    margin: 1rem auto;
-}
-
-.progress > p {
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-    font-size: .85rem;
-}
 
 
 
@@ -616,7 +498,7 @@ progress::-moz-progress-bar {
 }
 
 .bg-gray-light {
-    background-color: var(--gray-light-color);
+    background-color: var(--gris-oscuro);
 }
 
 .box-shadow-1 {
@@ -632,7 +514,7 @@ progress::-moz-progress-bar {
     text-align: center;
     text-decoration: none;
     color: var(--white-color);
-    background-color: var(--first-color);
+    background-color: var(--turqueza);
 }
 
 .container {
@@ -654,21 +536,27 @@ progress::-moz-progress-bar {
 }
 
 .section-title {
-    border-top: thin solid var(--first-color);
-    border-bottom: thin solid var(--first-color);
+    border-top: thin solid var(--turqueza);
+    border-bottom: thin solid var(--turqueza);
     margin: 2rem auto;
     padding: .5rem 1rem;
     width: 250px;
     text-align: center;
-    color: var(--title-color);
+    color: var(--blanco);
+
 }
 
 .text-first-color {
-    color: var(--first-color);
+    color: var(--turqueza);
 }
 
 .text-center {
     text-align: center;
+    padding: 20px;
+}
+
+.text-center span {
+    font-size: 50px;
 }
 
 .text-left {
@@ -731,7 +619,7 @@ progress::-moz-progress-bar {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background-color: var(--gray-dark-color);
+    background-color: var(--gris);
     box-shadow: 7px 7px 10px black;
     
     border-radius: 7px;
@@ -741,7 +629,7 @@ progress::-moz-progress-bar {
 .contact-card > svg {
     width: 2rem;
     height: 2rem;
-    fill: var(--first-color);
+    fill: var(--turqueza);
 }
 
 
@@ -750,7 +638,21 @@ progress::-moz-progress-bar {
 
 
 
+
+
+
+
+
+
+
+
+
+
 /* * CAMBIOS * */
+
+.contact-card-icons {
+    width: 100%;
+}
 
 .iconos-footer {
     width: 400px;
@@ -766,30 +668,82 @@ progress::-moz-progress-bar {
 }
 
 .social-icon li a {
-    
     transition: .5s;
     color: black;
-    text-shadow: 1px 1px 5px var(--first-color);
+    text-shadow: 1px 1px 5px var(--turqueza);
     font-size: 30px;
 }
 
 .social-icon li a:hover {
-    color: var(--first-color);
+    color: var(--turqueza);
     text-shadow: 1px 5px 1px black;
 }
 
-.footer img {
-    position: absolute;
-    width: 100%;
-    height: 30vh;
-}
 
-.footer small, .social-icon {
+.contact-card-icons small, .social-icon {
     position: relative;
 }
 
+.about span {
+    color: var(--turqueza);
+}
 
+.box-shadow-1 > i {
+    color: var(--turqueza);
+    font-size: 30px;
+}
 
+.skill {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--gris);
+    padding: 5px;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 7px 7px 10px black;
+
+}
+
+.skill-content {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 20px;
+    padding: 20px;
+}
+
+.skill-content p {
+    font-weight: bolder;
+    padding: 18px 30px;
+} 
+
+.skill-content i {
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.html, .git {
+    color: rgb(255, 93, 34);
+}
+
+.css {
+    color: rgb(0, 174, 255);
+}
+
+.js {
+    color: rgb(241, 241, 0);
+}
+
+.github {
+    color: black;
+}
+
+.skill-content .figma {
+    font-size: 30px;
+
+}
 
 
 
@@ -809,18 +763,19 @@ progress::-moz-progress-bar {
 }
 
 .footer {
-    margin-bottom: var(--header-height);
+    /* margin-bottom: var(--header-height); */
     padding: .5rem;
     text-align: center;
     color: var(--white-color);
     /* background-color: var(--gray-dark-color); */
     width: 100%;
-    height: 30vh;
-
+    height: 200px;
+    padding-bottom: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    background-color: var(--gris);
 }
 
 
@@ -832,8 +787,8 @@ progress::-moz-progress-bar {
     z-index: 999;
     padding: 1rem;
     width: 100%;
-    height: var(--header-height);
-    background-color: var(--second-color);
+    
+    background-color: transparent;
 }
 
 .header > .container {
@@ -843,7 +798,7 @@ progress::-moz-progress-bar {
 }
 
 .logo a {
-    color: var(--first-color);
+    color: var(--turqueza);
     font-weight: bold;
     font-size: 2rem;
     text-decoration: none;
@@ -898,7 +853,7 @@ progress::-moz-progress-bar {
 }
 
 .portfolio-modal h3 {
-    border-bottom: medium solid var(--first-color);
+    border-bottom: medium solid var(--turqueza);
     padding: .5rem 0;
     margin: 1rem auto;
     color: var(--title-color);
@@ -911,7 +866,7 @@ progress::-moz-progress-bar {
 }
 
 .portfolio-details b {
-    color: var(--first-color);
+    color: var(--turqueza);
 }
 
 .service-card {
@@ -921,12 +876,12 @@ progress::-moz-progress-bar {
 }
 
 .service-card h3 {
-    color: var(--title-color);
+    color: var(--blanco);
 } 
 
 .service-card svg {
     margin-bottom: 1.25rem;
-    fill: var(--first-color);
+    fill: var(--turqueza);
 }
 
 .social-media a {
@@ -980,7 +935,7 @@ progress::-moz-progress-bar {
 @media screen and (min-width: 1024px) {
     .about {
         display: grid;
-        grid-template-columns: repeat(3, 30%);
+        grid-template-columns: repeat(2, 45%);
         justify-content: space-between;
         align-content: center;
     }
@@ -994,10 +949,11 @@ progress::-moz-progress-bar {
     }
 
     .header {
-        position: sticky;
+        
         top: 0;
         padding: 0.5rem;
         height: calc(var(--header-height) - 0.5rem);
+        background-color: transparent;
     }
 
     .portfolio > .container {
@@ -1021,9 +977,15 @@ progress::-moz-progress-bar {
 
 
 
+
+
+
+
+
+/*
 .body {
     width: 250px;
-    height: 25vh;
+    height: 50vh;
 }
 
 @keyframes animate {
@@ -1064,4 +1026,4 @@ progress::-moz-progress-bar {
     height: 100%;
     object-fit: cover;
 }
-/**/
+*/
