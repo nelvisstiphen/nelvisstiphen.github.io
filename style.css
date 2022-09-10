@@ -14,7 +14,7 @@
     --title-color: #333;
     --text-color: #222;
     --white-alpha-color: rgba(255, 255, 255, 0.5);
-    --black-alpha-color: rgba(0, 0, 0, 0.7);
+    --black-alpha-color: rgba(0, 0, 0, 0.8);
     --max-width: 1200px;
     --header-height: 4rem;
     --gris: rgba(0, 0, 0, 0.60);
@@ -265,7 +265,6 @@ p {
     pointer-events: none;
     transition: opacity 0.5s ease;
     border-radius: 25px 5px 25px 5px;
-    
 }
 
 .menu.is-active {
@@ -314,7 +313,6 @@ p {
     opacity: 0;
     pointer-events: none;
     transition: all 1s;
-    
 }
 
 .modal-content {
