@@ -568,11 +568,11 @@ p {
 
 
 .img__personal {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     background-image: url(assets/foto.jpg);
-    background-size: 300px;
+    background-size: 200px;
     background-repeat: no-repeat;
     background-position: center;
     margin-bottom: 50px;
