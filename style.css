@@ -275,7 +275,7 @@ li {
   width: 200px;
   font-weight: bold;
 
-  color: var(--white-color);
+  color: var(--black-color);
   background-color: var(--turqueza);
   border: none;
 }
@@ -449,6 +449,11 @@ li {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+}
+
+.contact-card p {
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .contact-card > svg {
