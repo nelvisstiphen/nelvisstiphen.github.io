@@ -16,7 +16,7 @@
   --black-alpha-color: rgba(0, 0, 0, 0.8);
   --max-width: 1200px;
   --header-height: 4rem;
-  --gris: rgba(0, 0, 0, 0.6);
+  --gris: rgb(39, 39, 39);
   --gris-oscuro: #333333;
   --turqueza: turquoise;
   --blanco: white;
@@ -55,14 +55,21 @@ p {
   line-height: 1.6;
 }
 
+li {
+  list-style: none;
+}
+
+.container-theme {
+  background-color: var(--gris);
+  box-shadow: 7px 7px 10px black;
+  border-radius: 17px;
+}
+
 /* **********  Contact Form  ********** */
 
 .contact-form {
-  margin: 2rem;
   padding: 1rem;
   min-width: 300px;
-  background-color: var(--gris);
-  border-radius: 15px 15px 15px 15px;
   display: flex;
   flex-direction: column;
 }
@@ -76,9 +83,8 @@ p {
 
 .contact-form input,
 .contact-form textarea {
-  text-align: center;
   font-family: var(--font);
-  border-radius: 15px 15px 15px 15px;
+  border-radius: 15px;
 }
 
 .contact-form input {
@@ -209,7 +215,7 @@ p {
   pointer-events: none;
   display: flex;
   flex-direction: column;
-  background-color: var(--gris);
+  background-color: var(--black-alpha-color);
   opacity: 0;
   transition: opacity 0.5s ease;
   border-radius: 15px;
@@ -249,7 +255,7 @@ p {
 
 .modal-content {
   position: relative;
-  border-radius: 20px 20px 20px 20px;
+  border-radius: 20px;
 }
 
 /* ********** Utilidades ********** */
@@ -263,20 +269,15 @@ p {
   background-color: var(--gris-oscuro);
 }
 
-.box-shadow-1 {
-  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.25);
-}
-
 .btn {
-  border-radius: 0.5rem;
   padding: 1rem;
   display: inline-block;
   width: 200px;
   font-weight: bold;
-  text-align: center;
-  text-decoration: none;
+
   color: var(--white-color);
   background-color: var(--turqueza);
+  border: none;
 }
 
 .container {
@@ -333,67 +334,14 @@ p {
   margin-bottom: 2rem;
 }
 
-.contact-card {
-  margin: 1rem auto;
-  padding: 1rem;
-  width: 90%;
-  height: 144px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  background-color: var(--gris);
-  box-shadow: 7px 7px 10px black;
-
-  border-radius: 7px;
-}
-
-.contact-card > svg {
-  width: 2rem;
-  height: 2rem;
-  fill: var(--turqueza);
-}
-
-.contact-card-icons {
-  width: 100%;
-}
-
 .iconos-footer {
   width: 360px;
 }
 
-.social-icon {
-  display: flex;
-  justify-content: center;
-  padding: 0;
-  list-style: none;
-}
-
-.social-icon li a {
-  transition: 0.5s;
-  color: black;
-  text-shadow: 1px 1px 5px var(--turqueza);
-  font-size: 30px;
-  padding: 15px;
-}
-
-.social-icon li a:hover {
-  color: var(--turqueza);
-  text-shadow: 1px 5px 1px black;
-}
-
-.contact-card-icons small,
-.social-icon {
-  position: relative;
-}
+/* ********** SKILL ********** */
 
 .turqueza {
   color: var(--turqueza);
-}
-
-.box-shadow-1 > i {
-  color: var(--turqueza);
-  font-size: 30px;
 }
 
 .skill {
@@ -401,10 +349,7 @@ p {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  background-color: var(--gris);
   padding: 10px;
-  border-radius: 20px 20px 20px 20px;
-  box-shadow: 7px 7px 10px black;
   text-align: center;
 }
 
@@ -493,9 +438,54 @@ p {
   text-align: center;
 }
 
-.contact-card > small {
-  margin-top: -1rem;
+/****************** CONTACT CARD ******************/
+
+.contact-card {
+  margin: 1rem auto;
+  padding: 1rem;
+  width: 90%;
+  height: 144px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
+
+.contact-card > svg {
+  width: 2rem;
+  height: 2rem;
+  fill: var(--turqueza);
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icon a {
+  transition: 0.5s;
+  color: black;
+  text-shadow: 1px 1px 5px var(--turqueza);
+  font-size: 30px;
+  padding: 15px;
+}
+
+.social-icon a:hover {
+  color: var(--turqueza);
+  text-shadow: 1px 5px 1px black;
+}
+
+.contact-card .fa-solid {
+  color: var(--turqueza);
+  font-size: 30px;
+}
+
+.social-media svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/************ FOOTER ************/
 
 .footer {
   padding: 0.5rem;
@@ -510,6 +500,8 @@ p {
   justify-content: space-around;
   background-color: var(--gris);
 }
+
+/************ HEADER ************/
 
 .header {
   position: fixed;
@@ -583,7 +575,7 @@ p {
   color: var(--turqueza);
 }
 
-/*  PROYECTOS   */
+/*********  PROYECTOS   *********/
 
 .container-proyectos {
   display: grid;
@@ -597,7 +589,6 @@ p {
   align-items: center;
   flex-direction: column;
   border-radius: 15px;
-  background-color: #00ebfc;
   overflow: hidden;
 }
 
@@ -609,16 +600,6 @@ p {
   width: 100%;
   height: auto;
   object-fit: cover;
-}
-
-.social-media a {
-  padding: 0 0.4rem;
-  text-decoration: none;
-}
-
-.social-media svg {
-  width: 1.5rem;
-  height: 1.5rem;
 }
 
 @media screen and (min-width: 768px) {
